@@ -275,3 +275,97 @@ main {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* works */
+
+.works {
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 0;
+}
+
+.works-titulo {
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden;
+    width: 860px; /* ~3 cards visíveis */
+}
+
+.carousel-card {
+    flex-shrink: 0;
+    width: 300px;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(0.8);
+    opacity: 0.4;
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+.carousel-card.active {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 30px 80px rgba(255, 255, 255, 0.15),
+                0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.carousel-card.adjacent {
+    transform: scale(0.88);
+    opacity: 0.6;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: 0.5px solid rgba(255,255,255,0.3);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s, background 0.3s;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    border-color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.05);
+}
