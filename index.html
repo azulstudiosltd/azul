@@ -14,10 +14,10 @@
         <h1><a href="index.html">azul.</a></h1>
         <nav>
             <ul> 
-                <li><a href="about.html">about</a></li>
-                <li><a href="services.html">services</a></li>
-                <li><a href="works.html">works</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#works">works</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,9 +25,9 @@
     <main>
         <section class="hero">
             <h1><span class="design">Web Design</span> the future</h1>
-            <button class="botao-animado">start a project</button>
+            <button class="botao-animado" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">start a project</button>
         </section>
-        <section class="about">
+        <section id="about" class="about">
             <h2>about</h2>
             <div class="about-colunas">
             <p>We are a specialized agency in developing professional and fully customized websites. 
@@ -45,7 +45,7 @@
               </div>
         </section>
 
-        <section class="services">
+        <section id="services" class="services">
             <div class="services-imagem">
                 <img src="imagens/design.webp" alt="design">
             </div>
@@ -59,7 +59,7 @@
                 </div>
         </section>
 
-        <section class="works">
+        <section id="works" class="works">
     <h2 class="works-titulo">works</h2>
     <div class="carousel-container">
         <button class="carousel-btn prev" id="prev">&#8592;</button>
@@ -88,7 +88,7 @@
         <button class="carousel-btn next" id="next">&#8594;</button>
     </div>
 </section>
-<section class="contact">
+<section id="contact" class="contact">
     <div class="contact-container">
         <div class="contact-info">
             <h2>get in touch</h2>

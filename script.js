@@ -17,10 +17,11 @@ const cards = document.querySelectorAll('.carousel-card');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
-const cardWidth = 300;
+const isMobile = window.innerWidth <= 768;
+const cardWidth = isMobile ? window.innerWidth * 0.6 : 300;
 const gap = 24;
 const step = cardWidth + gap;
-const wrapperWidth = 860;
+const wrapperWidth = isMobile ? window.innerWidth : 860;
 let current = 1;
 
 function updateCarousel() {

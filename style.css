@@ -42,13 +42,20 @@
     */
 
 /* menu */ 
-
+body {
+    padding-top: 80px;;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-    background-color: transparent;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 header h1 {
     font-family: "DM Sans", sans-serif;
@@ -133,6 +140,11 @@ main {
 }
 
 /* Botão */
+
+html {
+    scroll-behavior: smooth;
+} /* Importante para o scroll suave ao clicar no botão "start a project" */
+
 .botao-animado {
   position: relative;
   padding: 15px 30px;
@@ -549,4 +561,85 @@ footer {
     font-family: "DM Sans", sans-serif;
     font-size: 12px;
     color: #999;
+}
+
+/* responsividade */
+
+@media (max-width: 768px) {
+
+    /* header */
+    header {
+        padding: 16px 24px;
+    }
+    header nav ul {
+        gap: 16px;
+    }
+    header nav ul li a {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    /* hero */
+    .hero {
+        min-height: 50vh;
+        padding: 40px 24px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    /* about */
+    .about {
+        padding: 60px 24px;
+        min-height: auto;
+    }
+    .about-colunas {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    /* services */
+    .services {
+        flex-direction: column;
+        padding: 60px 24px;
+        min-height: auto;
+        gap: 40px;
+    }
+    .services-imagem img {
+        width: 100%;
+    }
+    .services-conteudo {
+        text-align: left;
+    }
+    .services h2 {
+        text-align: left;
+        margin: 0;
+    }
+    .services-colunas {
+        grid-template-columns: 1fr;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    /* works */
+    .carousel-track-wrapper {
+        width: 100vw;
+    }
+    .carousel-card {
+        width: 220px; /* valor fixo igual ao JS */
+    }
+
+    /* contact */
+    .contact {
+        padding: 40px 24px;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 24px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }
