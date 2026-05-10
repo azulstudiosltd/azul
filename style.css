@@ -173,7 +173,7 @@ main {
 /* about */
 
 .about {
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@ main {
 /* services */
 
 .services {
-   
+    min-height: 80vh;
     padding: 0 80px;
     display: flex;
     flex-direction: row;
@@ -538,4 +538,15 @@ main {
 
 .contact-form button:hover::after {
     transform: translateX(0);
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    color: #999;
 }
